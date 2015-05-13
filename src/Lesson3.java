@@ -89,7 +89,7 @@ public class Lesson3 {
 
         int i1 = 5;
         int i2 = 5;
-        //Massiv.main();
+        //Lesson_02.Massiv.main();
 
     }
 
