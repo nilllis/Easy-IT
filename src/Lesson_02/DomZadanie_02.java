@@ -40,13 +40,13 @@ public class DomZadanie_02 {
         for (int i = 0; i < args.length; i++) {
             if (min > args[i]) {min = args[i];}
         }
-        System.out.println("минимальное значение 1й способ = " + min);
+        System.out.println("минимальное значение 1й способ (перебор элементов) = " + min);
         Razdelitel.Punktir();
 
 
         // создадим новый массив и передадим в него все данные из известного массива
         int[] newargs = args;
-        // при этом новый массив - это лишь ссылка на массив, который хранится в ОЗУ, покажем это
+        // при этом новый массив - это лишь ссылка на объект, который хранится в ОЗУ, покажем это
         System.out.println("до изменения = " + args[5]);
         newargs[5]= 565656;
         System.out.println("после изменения = " + args[5]);
@@ -61,9 +61,9 @@ public class DomZadanie_02 {
         argsString[0] = "tt";
         PokazatMassiv(argsString);
 
-        Arrays.sort(argsString); //сортировка массива
+        Arrays.sort(argsString); //сортировка массива регулярным выражением
         PokazatMassiv(argsString);
-        System.out.println("минимальное значение 2й способ = " + argsString[0]);
+        System.out.println("минимальное значение 2й способ (сортировка массива) = " + argsString[0]);
     }
 
     public static void PokazatMassiv(String[] args){

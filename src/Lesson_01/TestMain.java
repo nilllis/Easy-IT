@@ -20,7 +20,6 @@ public class TestMain {
 
         char name = 'h';
 
-
         int i = 80;
         int j = 5;
             System.out.println(i + "%" + j + " = " + i%j + "(остаток от деления)");
@@ -32,9 +31,9 @@ public class TestMain {
 
         int x = 0;
             System.out.println("x = " + x);
-            System.out.println("x++ = " + x++ + "(переменная сначала вывелась в консоль как равная 0, а только потом была увеличена)");
+            System.out.println("x++ = " + x++ + " (переменная сначала вывелась в консоль как равная 0, а только потом была увеличена)");
             System.out.println("вот ее значение в памяти: x = " + x);
-            System.out.println("++x = " + ++x + "переменная сначала увеличилась, а потом вывелась на консоль");
+            System.out.println("++x = " + ++x + " (переменная сначала увеличилась, а потом вывелась на консоль)");
             Razdelitel.Punktir();
 
         x=1;
