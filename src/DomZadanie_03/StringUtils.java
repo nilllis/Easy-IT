@@ -1,4 +1,4 @@
-package Lesson_03;
+package DomZadanie_03;
 
 import java.util.Scanner;
 

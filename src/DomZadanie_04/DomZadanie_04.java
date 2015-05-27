@@ -1,13 +1,13 @@
-package Lesson_04;
+package DomZadanie_04;
 
 import java.util.Arrays;
 
 /**
  * Created by пк on 17.05.2015.
+ *
+ *  1. Создать 3и метода инвертирования массива.
  */
 public class DomZadanie_04 {
-
-    //    1. Создать 3и метода инвертирования массива.
 
     public static void main(String[] args) {
 

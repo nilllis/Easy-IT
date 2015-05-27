@@ -1,15 +1,16 @@
-package Lesson_04;
+package DomZadanie_04;
 
 import java.util.Arrays;
 
 /**
  * Created by пк on 19.05.2015.
+ *
+ * 5. Найти среднее арифметическое всех элементов массива.
  */
 public class DomZadanie_04_4 {
 
     public static void main(String[] args) {
 
-    //    5. Найти среднее арифметическое всех элементов массива.
     int[] arrInt = {4, -5, 0, 0, 6, 8};
         System.out.println("исходный массив: " + Arrays.toString(arrInt));
 

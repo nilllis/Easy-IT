@@ -1,16 +1,15 @@
-package Lesson_04;
-
-import java.util.Arrays;
+package DomZadanie_04;
 
 /**
  * Created by пк on 18.05.2015.
+ *
+ * 2. Создайте массив, содержащий 10 первых нечетных чисел.
+ * Выведете элементы массива на консоль в одну строку, разделяя запятой.
  */
 public class DomZadanie_04_1 {
 
     public static void main(String[] args) {
 
-        // 2. Создайте массив, содержащий 10 первых нечетных чисел.
-        // Выведете элементы массива на консоль в одну строку, разделяя запятой.
         int[] ne4etn = new int[10];
         int i = 0;
 
