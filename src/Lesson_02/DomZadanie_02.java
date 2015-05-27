@@ -1,8 +1,6 @@
 package Lesson_02;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
@@ -19,31 +17,85 @@ public class DomZadanie_02 {
 
     public static void main(String[] args) throws IOException {
 
-        int[] arr = {a, b, c, d, e, -222};
-        String str;
+        System.out.println("Good day.");
+        char vibor;
+        char ignore;
+        do {
+            if (!mainProcess()) break;
+            do {
+                System.out.print("Еще раз? y/n: ");
+                vibor = (char) System.in.read();
+                do {
+                    ignore = (char) System.in.read();
+                } while (ignore != '\n');
+            } while (vibor != 'y' && vibor != 'n');
+        } while (vibor == 'y');
+    }
 
-        BufferedReader vvod = new BufferedReader(new InputStreamReader(System.in));
+    public static boolean mainProcess() throws IOException {
+
+        int[] arr = {a, b, c, d, e, -222};
+
+        char simv;
+
+        System.out.print("\nWe have next array: ");
+        pokazatMassiv(arr);
+        System.out.println("\nChoose the method for search min value (press 'q' for quit):");
+        System.out.println(" 1. Перебор элементов массива.");
+        System.out.println(" 2. Сравнение глобальных переменных.");
+        System.out.println(" 3. Сортировка массива.");
+        System.out.print("Ваш выбор: ");
 
         do {
-            System.out.print("Good day.\nWe have next array ");
-            PokazatMassiv(arr);
-            System.out.print("\nChoose the method for search min value (press 'q' for quit):" + "\nPress 1 or 2 or 3: ");
+            simv = vvodDannih();
+            if (simv == 'q') {
+                System.out.println("Good bye!");
+                return false;
+            }
+            switch (simv) {
+                case '0':
+                    System.out.print("Error! Повторите ваш выбор: ");
+                    break;
+                case '1':
+                    System.out.println(" 1й способ. min  = " + minValuePereborom(arr) + "\n");
+                    break;
+                case '2':
+                    System.out.println(" 2й способ. min  = " + minValueSravneniem() + "\n");
+                    break;
+                case '3':
+                    System.out.println(" 3й способ. min  = " + minValueSort(arr) + "\n");
+                    break;
+            }
+        } while (simv == '0');
 
-            str = vvod.readLine();
+        return true;
+    }
 
-            if (str.charAt(0) == '1')
-                System.out.println("минимальное значение 1й способ (перебор элементов) = " + MinValuePereborom(arr) + "\n\n");
-            if (str.charAt(0) == '2')
-                System.out.println("минимальное значение 2й способ (сравнение глобальных переменных) = " + MinValueSravneniem() + "\n\n");
-            if (str.charAt(0) == '3')
-                System.out.println("минимальное значение 3й способ (сортировка массива) = " + MinValueSort(arr) + "\n\n");
+    public static char vvodDannih() throws IOException {
+        StringBuffer str = new StringBuffer();
+        char simv;
+        for (; ; ) {
+            simv = (char) System.in.read();
+            if (simv == '\n') break;
+            str.append(simv);
+        }
 
-        } while (str.charAt(0) != 'q');
-        
+        if (!correctData(str.toString()))
+            return '0';
+
+        return str.charAt(0);
+    }
+
+    public static boolean correctData(String str) {
+        if (str.length() != 1) return false;
+
+        char simv = str.charAt(0);
+        if (simv == '1' || simv == '2' || simv == '3' || simv == 'q') return true;
+        return false;
     }
 
 
-    public static int MinValuePereborom(int[] args) {
+    public static int minValuePereborom(int[] args) {
 
         // поиск минимального значения массива путем перебора всех элементов
         int min = args[0];
@@ -57,7 +109,7 @@ public class DomZadanie_02 {
 
     }
 
-    public static int MinValueSravneniem() {
+    public static int minValueSravneniem() {
 
         // поиск минимального значения массива путем сравнения глобальных переменных
         int min = a;
@@ -78,7 +130,7 @@ public class DomZadanie_02 {
 
     }
 
-    public static int MinValueSort(int[] args) {
+    public static int minValueSort(int[] args) {
 
         //поиск минимального значения используя сортировку массива
         int[] newArr;
@@ -88,25 +140,21 @@ public class DomZadanie_02 {
 
     }
 
-    public static String MinValueSortString(int[] args) {
+    public static String minValueSortString(int[] args) {
 
-        //особый случай - сортировка String массива - так нельзя искать минимальное значение
+        //особый случай - сортировка String массива, когда все его значения и являются числами - так нельзя искать минимальное значение
         String[] newArr = new String[args.length];
         for (int i = 0; i < args.length; i++)
             newArr[i] = String.valueOf(args[i]);
 
-        newArr[0] = "tt";
         Arrays.sort(newArr);
-        PokazatMassiv(newArr);
+        pokazatMassiv(newArr);
         return newArr[0];
 
     }
 
 
-
-
-
-    public static void PokazatMassiv(String[] args) {
+    public static void pokazatMassiv(String[] args) {
 
         System.out.print("[ ");
         for (int i = 0; i < args.length; i++) {
@@ -114,11 +162,11 @@ public class DomZadanie_02 {
             if (i == args.length - 1) break;
             System.out.print(", ");
         }
-        System.out.println(" ]");
+        System.out.print(" ]");
 
     }
 
-    public static void PokazatMassiv(int[] args) {
+    public static void pokazatMassiv(int[] args) {
 
         System.out.print("[ ");
         for (int i = 0; i < args.length; i++) {
@@ -126,7 +174,7 @@ public class DomZadanie_02 {
             if (i == args.length - 1) break;
             System.out.print(", ");
         }
-        System.out.println(" ]");
+        System.out.print(" ]");
 
     }
 

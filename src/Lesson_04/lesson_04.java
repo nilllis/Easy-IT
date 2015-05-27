@@ -22,7 +22,7 @@ public class lesson_04 {
         int[] arr4;
         //arr4 = {1, 2, 3, 4, 5};
 
-        System.out.println(arr1);//выведет идентефикатор массива и его хеш код, т.е. по сути ссылку на объект
+        System.out.println(arr1); //выведет идентефикатор массива и его хеш код, т.е. по сути ссылку на объект
         System.out.println("---------------");
 
         System.out.println("длина массива - " + arr3.length);
@@ -31,29 +31,29 @@ public class lesson_04 {
         //вывод массива через цикл for
         System.out.print("arr3: ");
         for (int i = 0; i < arr3.length; i++)
-            System.out.print(arr3[i]);
+            System.out.print(arr3[i] + " ");
         System.out.println();
 
         //вывод пустого массива int
         System.out.print("int массив (пустой): ");
         for (int i = 0; i < arr2.length; i++)
-            System.out.print(arr2[i]);
+            System.out.print(arr2[i] + " ");
         System.out.println();
         //вывод пустого массива String
         String[] arrStr = new String[3];
         System.out.print("String массив (пустой): ");
         for (int i = 0; i < arrStr.length; i++)
-            System.out.print(arrStr[i]);
+            System.out.print(arrStr[i] + " ");
         System.out.println();
         System.out.println("---------------");
 
 
         //вывод массивов через цикл for each
         System.out.println("Вывод String массива через for each: ");
-        for (String i : arrStr) System.out.print(i);
+        for (String i : arrStr) System.out.print(i + " ");
         System.out.println();
         System.out.println("Вывод int массива через for each: ");
-        for (int i : arr2) System.out.print(i);
+        for (int i : arr2) System.out.print(i + " ");
         System.out.println("\n---------------");
 
 

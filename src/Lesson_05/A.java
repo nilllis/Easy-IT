@@ -10,8 +10,8 @@ public class A {
         B a1 = new B();
         B a2 = new B();
         B a3 = new B();
-        //System.out.println(a1.b);
 
+        a1.countObjects();
     }
 
 }
