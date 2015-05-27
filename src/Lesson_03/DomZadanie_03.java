@@ -1,7 +1,5 @@
 package Lesson_03;
 
-import Lesson_01.Razdelitel;
-
 //        »»»»»»»»Домашнее задание«««««««<
 //
 //        Предусмотреть утилитный класс для работы со строками StringUtils.
@@ -9,8 +7,6 @@ import Lesson_01.Razdelitel;
 //
 //        1) div
 //        public void div(String number1, String number2){..............}
-//
-
 //
 //        2) findWord
 //        public void findWord(String text, String word){..............}
@@ -45,7 +41,7 @@ public class DomZadanie_03 {
 
 
         //ищет все вхождения слова word в строке text, заменяет все вхождения одного слова на другое слово.
-        String text = "Vertical Text In Word. Making text vertical in word isn’t easy if you don’t know where to look." +
+        String text = "Vertical Text 55 In Word. Making text vertical in word isn’t easy if you don’t know where to look." +
                 " There is no simple way of getting Word (word) to display vertically aligned text, but there is a sneaky way.";
         String word = "t";
         String wordPaste = "***";
@@ -54,6 +50,7 @@ public class DomZadanie_03 {
 
         //Находит в тексте все double числа и выводит их на экран.
         //Если чисел не обнаружено в тексте необходимо вывести сообщение: "Not found"
+        System.out.println("\nDoubles: ");
         String str = text.trim();
         dz03.findNumbers(str);
 
