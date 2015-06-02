@@ -8,10 +8,10 @@ import java.util.LinkedList;
  */
 public class lesson {
 
-    public static void main(String[] args) {
+    public static void Main(String[] args) {
 
         ArrayList<Integer> a = new ArrayList<Integer>();
-        int[] arrA = {1, 2, 3, 4, 5, 6};
+        int[] arrA = {1, 2, 3, 4, 5};
         for (int i = 0; i < arrA.length; i++)
             a.add(arrA[i]);
 
@@ -19,7 +19,6 @@ public class lesson {
         int[] arrB = {3, 4, 5, 6};
         for (int i = 0; i < arrB.length; i++)
             b.add(arrB[i]);
-
 
 
         ArrayList<Integer> c = new ArrayList<Integer>();
@@ -33,5 +32,25 @@ public class lesson {
         System.out.println(c.size() + " элементов: ");
         for (int i = 0; i < c.size(); i++)
             System.out.print(c.get(i));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void main(String[] args) {
+        Integer[] arrA = {1, 2, 3, 4, 5, 6};
+        //for (Integer elem : arrA)
+        //System.out.print(elem.hashCode());
+        for(int i = 0 ; i <arrA.length;i++)
+            System.out.println(arrA[i]+ " - "+ arrA.hashCode());
+
     }
 }
