@@ -5,8 +5,8 @@ package DomZadanie_06_fractionNumber;
  */
 public class FractionNumber implements FractionNumberInterfeys {
 
-    private int divident = 1;
-    private int divisor;
+    private int divident;
+    private int divisor = DEFAULT_DIVISOR_VALUE;
 
 
     @Override
@@ -26,8 +26,11 @@ public class FractionNumber implements FractionNumberInterfeys {
 
     @Override
     public void setDivisor(int divisor) {
-        if (divisor == 0) throw new IllegalArgumentException();
-        this.divisor = divisor;
+        if (divisor == 0) {
+            //throw new IllegalArgumentException();
+            //System.out.println("Недопустимое значение");
+        }
+        else this.divisor = divisor;
     }
 
     @Override

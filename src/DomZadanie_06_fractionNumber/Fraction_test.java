@@ -7,8 +7,9 @@ public class Fraction_test {
     public static void main(String[] args) {
 
         FractionNumber num = new FractionNumber();
-        //num.setDividend(2);
-        num.setDivisor(6);
+        num.setDividend(2);
+        num.setDivisor(0);
+        num.value();
 
         System.out.println(num.toString());
     }
