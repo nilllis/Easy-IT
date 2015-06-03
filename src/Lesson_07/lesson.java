@@ -1,14 +1,13 @@
 package Lesson_07;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 /**
  * Created by пк on 02.06.2015.
  */
 public class lesson {
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
 
         ArrayList<Integer> a = new ArrayList<Integer>();
         int[] arrA = {1, 2, 3, 4, 5};
@@ -34,23 +33,4 @@ public class lesson {
             System.out.print(c.get(i));
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    public static void main(String[] args) {
-        Integer[] arrA = {1, 2, 3, 4, 5, 6};
-        //for (Integer elem : arrA)
-        //System.out.print(elem.hashCode());
-        for(int i = 0 ; i <arrA.length;i++)
-            System.out.println(arrA[i]+ " - "+ arrA.hashCode());
-
-    }
 }

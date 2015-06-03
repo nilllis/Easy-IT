@@ -6,8 +6,13 @@ package DomZadanie_06_fractionNumber;
 public class FractionNumber implements FractionNumberInterfeys {
 
     private int divident;
-    private int divisor = DEFAULT_DIVISOR_VALUE;
+    private int divisor;
 
+
+    FractionNumber(int divident, int divisor) {
+        setDividend(divident);
+        setDivisor(divisor);
+    }
 
     @Override
     public int getDivident() {
@@ -25,12 +30,10 @@ public class FractionNumber implements FractionNumberInterfeys {
     }
 
     @Override
-    public void setDivisor(int divisor) {
+    public void setDivisor(int divisor)  { //throw new IllegalArgumentException()
         if (divisor == 0) {
-            //throw new IllegalArgumentException();
-            //System.out.println("Недопустимое значение");
-        }
-        else this.divisor = divisor;
+            this.divisor = DEFAULT_DIVISOR_VALUE;
+        } else this.divisor = divisor;
     }
 
     @Override
@@ -40,9 +43,7 @@ public class FractionNumber implements FractionNumberInterfeys {
 
     @Override
     public double value() {
-        double d = divident / divisor;
-        return d;
+        return  (double) divident / divisor;
     }
-
 
 }
