@@ -8,8 +8,11 @@ public class FractionNumber implements FractionNumberInterfeys {
     private int divident;
     private int divisor;
 
+    FractionNumber() {
+        setDivisor(DEFAULT_DIVISOR_VALUE);
+    }
 
-    FractionNumber(int divident, int divisor) {
+    FractionNumber(int divident, int divisor) throws IllegalArgumentException {
         setDividend(divident);
         setDivisor(divisor);
     }
@@ -30,10 +33,16 @@ public class FractionNumber implements FractionNumberInterfeys {
     }
 
     @Override
-    public void setDivisor(int divisor)  { //throw new IllegalArgumentException()
+    public void setDivisor(int divisor) throws IllegalArgumentException {
         if (divisor == 0) {
-            this.divisor = DEFAULT_DIVISOR_VALUE;
-        } else this.divisor = divisor;
+            throw new IllegalArgumentException("divisor must be > 0");
+        }
+
+        if (divisor < 0) {
+            setDividend(getDivident() * -1);
+            divisor *= -1;
+        }
+        this.divisor = divisor;
     }
 
     @Override
@@ -43,7 +52,7 @@ public class FractionNumber implements FractionNumberInterfeys {
 
     @Override
     public double value() {
-        return  (double) divident / divisor;
+        return (double) divident / divisor;
     }
 
 }

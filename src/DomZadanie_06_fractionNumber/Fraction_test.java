@@ -6,10 +6,10 @@ package DomZadanie_06_fractionNumber;
 public class Fraction_test {
     public static void main(String[] args) {
 
-        FractionNumber num1 = new FractionNumber(-2, 5);
+        FractionNumber num1 = new FractionNumber(-2, -3);
         System.out.println(num1 + " = " + num1.value());
 
-        FractionNumber num2 = new FractionNumber(4, 5);
+        FractionNumber num2 = new FractionNumber(4, -5);
         System.out.println(num2 + " = " + num2.value());
 
 

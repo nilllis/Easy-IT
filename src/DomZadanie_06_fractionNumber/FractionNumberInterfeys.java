@@ -9,7 +9,7 @@ public interface FractionNumberInterfeys {
     public int getDivident();
     public int getDivisor();
     public void setDividend(int dividend);
-    public void setDivisor(int divisor);
+    public void setDivisor(int divisor) throws IllegalArgumentException;
     public  String toString();
     public double value();
 
