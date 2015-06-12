@@ -1,3 +1,4 @@
+package DomZadanie_08;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -20,12 +21,6 @@ public interface MultiMap<K, V> extends Map<K, V> {
     int countValues(K key);
 
     /**
-     * Возвращает последне добавленное значение в карту
-     */
-    public V get(Object key);
-
-
-    /**
      * Возвращает итератор на значения, хранящиеся для указанного ключа.
      * Если ниодного значения не существует, должен возвращаться пустой итератор. Т.е. итератор никогда не должен быить равен null
      *
@@ -35,7 +30,12 @@ public interface MultiMap<K, V> extends Map<K, V> {
     public Iterator<V> valuesIterator(K key);
 
     /**
-     *  Удаляет все значения для указханного ключа
+     *  Удаляет все значения для указанного ключа
      */
     public V remove(Object key);
+
+    /**
+     * Возвращает последне добавленное значение в карту
+     */
+    public V get(Object key);
 }

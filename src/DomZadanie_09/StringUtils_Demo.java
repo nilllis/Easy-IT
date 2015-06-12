@@ -1,5 +1,7 @@
 package DomZadanie_09;
 
+import java.util.Arrays;
+
 /**
  * Created by пк on 07.06.2015.
  */
@@ -14,5 +16,13 @@ public class StringUtils_Demo {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        String string = "oo ni oo is ";
+        String word = "oo";
+        int[] result = obj.findWord(string, word);
+        System.out.println("\nSTRING: " + string + "\nWORD: " + word);
+        System.out.println(Arrays.toString(result));
+
+
     }
 }
