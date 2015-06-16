@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Created by пк on 12.06.2015.
  */
-public class OneByteFileCopyUtils implements FileCopyUtils {
+public class FileCopyUtils_OneByte implements FileCopyUtils {
 
     @Override
     public void copyFile(String source, String destination) throws FileCopyFailedException, FileAlreadyExistsException {
@@ -16,8 +16,9 @@ public class OneByteFileCopyUtils implements FileCopyUtils {
         File file = new File(destination);
 
         if (file.exists()) {
-            throw new FileAlreadyExistsException("this file already exists - " + destination);
+            throw new FileAlreadyExistsException("this file already exists:\n" + destination);
         }
+
         FileInputStream inputStream = null;
         FileOutputStream outputStream = null;
 
@@ -44,7 +45,6 @@ public class OneByteFileCopyUtils implements FileCopyUtils {
                     e.printStackTrace();
                 }
             }
-
             if (outputStream != null) {
                 try {
                     outputStream.flush();
@@ -55,7 +55,5 @@ public class OneByteFileCopyUtils implements FileCopyUtils {
             }
 
         }
-
-
     }
 }
