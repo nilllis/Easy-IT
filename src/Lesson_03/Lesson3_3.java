@@ -1,7 +1,5 @@
 package Lesson_03;
 
-import Lesson_01.Razdelitel;
-
 /**
  * Created by пк on 16.05.2015.
  */

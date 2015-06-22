@@ -1,4 +1,4 @@
-package DomZadanie_12;
+package DomZadanie_12.Tasks;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;

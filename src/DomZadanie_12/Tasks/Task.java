@@ -1,4 +1,4 @@
-package DomZadanie_12;
+package DomZadanie_12.Tasks;
 
 
 //  Методы запуска нитей. Задача запустить нить двумя способами.
@@ -23,6 +23,8 @@ package DomZadanie_12;
 //          в очереди наличие задач и исполняет их.
 //        5.Создать главную нить и запустить программу на выполнение
 
+import DomZadanie_12.Executor.TaskExecutionFailedException;
+
 /**
  * Интерфейс абстрактной задачи.
  */
@@ -43,7 +45,7 @@ public interface Task {
     /**
      * Метод, который исполняет задачу.
      *
-     * @throws TaskExecutionFailedException если задача не была выполнена корректно
+     * @throws DomZadanie_12.Executor.TaskExecutionFailedException если задача не была выполнена корректно
      */
     void execute() throws TaskExecutionFailedException;
 }

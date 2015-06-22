@@ -18,7 +18,7 @@ public class FractionNumber implements FractionNumberInterfeys {
     }
 
     @Override
-    public int getDivident() {
+    public int getDividend() {
         return divident;
     }
 
@@ -39,7 +39,7 @@ public class FractionNumber implements FractionNumberInterfeys {
         }
 
         if (divisor < 0) {
-            setDividend(getDivident() * -1);
+            setDividend(getDividend() * -1);
             divisor *= -1;
         }
         this.divisor = divisor;

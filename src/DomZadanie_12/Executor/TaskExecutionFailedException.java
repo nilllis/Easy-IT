@@ -1,4 +1,4 @@
-package DomZadanie_12;
+package DomZadanie_12.Executor;
 
 /**
  * Непредвиденные ошибки во время выполнения задачи

@@ -1,4 +1,6 @@
-package DomZadanie_12;
+package DomZadanie_12.Storage;
+
+import DomZadanie_12.Tasks.Task;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -8,10 +10,10 @@ import java.util.List;
  */
 public class TasksStorage_Impl implements TasksStorage {
 
-    private List<Task> queue = new LinkedList<>();
+    private List<Task> queue = new LinkedList<Task>();
 
     @Override
-    public void add(Task task) throws NullPointerException {
+    public synchronized void add(Task task) throws NullPointerException {
         if (task == null) {
             throw new NullPointerException("task == null");
         }
@@ -19,22 +21,15 @@ public class TasksStorage_Impl implements TasksStorage {
     }
 
     @Override
-    public Task get() {
+    public synchronized Task get() {
         if (count() == 0) {
             return null;
         }
-
-        Task task = new Task_Impl();
-        int num = 0;
-        task = queue.get(num);
-        task.incTryCount();
-        queue.remove(num);
-
-        return task;
+        return queue.remove(0);
     }
 
     @Override
-    public int count() {
+    public synchronized int count() {
         return queue.size();
     }
 }

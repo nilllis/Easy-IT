@@ -6,7 +6,7 @@ import java.util.Iterator;
 /**
  * Created by пк on 11.06.2015.
  */
-public class MultiMap_Test {
+public class MultiMap_Demo {
     public static void main(String[] args) {
 
         MultiMap_Impl<String, Integer> myMap = new MultiMap_Impl();
@@ -42,10 +42,10 @@ public class MultiMap_Test {
 
 
         //клонирование объекта MultiMap_Impl
-        MultiMap_Impl<String, Integer> testMap = (MultiMap_Impl) myMap.clone();
+        MultiMap_Impl<String, Integer> cloneMap = (MultiMap_Impl) myMap.clone();
         myMap.put("negative", -100);
         System.out.println("--myMap--\t\t" + myMap);
-        System.out.println("--testMap--\t\t" + testMap + "\n");
+        System.out.println("--cloneMap--\t\t" + cloneMap + "\n");
 
         //стереть все данные из объекта MultiMap_Impl
         myMap.clear();

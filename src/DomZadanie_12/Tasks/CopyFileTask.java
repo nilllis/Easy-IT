@@ -1,4 +1,4 @@
-package DomZadanie_12;
+package DomZadanie_12.Tasks;
 
 import DomZadanie_10.FileCopyUtils;
 

@@ -1,4 +1,6 @@
-package DomZadanie_12;
+package DomZadanie_12.Storage;
+
+import DomZadanie_12.Tasks.Task;
 
 /**
  * Интерфейс списка задач.

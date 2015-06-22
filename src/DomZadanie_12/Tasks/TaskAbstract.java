@@ -1,9 +1,9 @@
-package DomZadanie_12;
+package DomZadanie_12.Tasks;
 
 /**
  * Created by пк on 16.06.2015.
  */
-public class Task_Impl implements Task {
+public abstract class TaskAbstract implements Task {
     private int tryCount = 0;
 
     @Override
@@ -16,8 +16,5 @@ public class Task_Impl implements Task {
         tryCount++;
     }
 
-    @Override
-    public void execute() throws TaskExecutionFailedException {
 
-    }
 }

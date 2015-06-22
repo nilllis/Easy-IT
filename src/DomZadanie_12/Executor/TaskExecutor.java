@@ -1,4 +1,6 @@
-package DomZadanie_12;
+package DomZadanie_12.Executor;
+
+import DomZadanie_12.Storage.TasksStorage;
 
 /**
  * Интерфейс исполнителя задач.
